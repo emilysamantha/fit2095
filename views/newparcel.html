@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <a href="/"
+      ><img
+        src="Australia-Post-Logo.png"
+        alt="Australia-Post-Logo"
+        width="100px"
+    /></a>
+    <a href="/newparcel">Add a New Parcel</a>
+    <a href="/listparceloption">List Parcels</a>
+    <a href="/deleteparcel">Delete a Parcel</a>
+    <a href="/updateparcel">Update a Parcel</a>
+  </header>
+  <body>
+    <h1 class="text-danger">Add a New Parcel</h1>
+    <form method="post" action="/newparceldata">
+      <table>
+        <tr>
+          <td>Sender</td>
+          <td><input type="text" name="sender" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><input type="text" name="address" /></td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td><input type="number" name="weight" /></td>
+        </tr>
+        <tr>
+          <td>Fragile</td>
+          <td><input type="checkbox" name="fragile" /></td>
+        </tr>
+        <tr>
+          <td>Shipment</td>
+          <td><input type="text" name="shipment" /></td>
+        </tr>
+      </table>
+      <button class="btn btn-danger submit-btn" type="submit">Submit</button>
+    </form>
+  </body>
+</html>

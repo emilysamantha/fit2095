@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <a href="/"
+      ><img
+        src="Australia-Post-Logo.png"
+        alt="Australia-Post-Logo"
+        width="100px"
+    /></a>
+    <a href="/newparcel">Add a New Parcel</a>
+    <a href="/listparceloption">List Parcels</a>
+    <a href="/deleteparcel">Delete a Parcel</a>
+    <a href="/updateparcel">Update a Parcel</a>
+  </header>
+  <body>
+    <h1 class="text-danger">Listing <%= title %></h1>
+    <h3>
+      <table class="table table-striped">
+        <tr>
+          <th class="listparcel-td">ID</th>
+          <th class="listparcel-td">Sender</th>
+          <th class="listparcel-td">Address</th>
+          <th class="listparcel-td">Weight</th>
+          <th class="listparcel-td">Fragile</th>
+          <th class="listparcel-td">Shipment</th>
+        </tr>
+        <% for (let i = 0; i < parcels.length; i++) { %>
+        <tr>
+          <td class="listparcel-td"><%= parcels[i]._id %></td>
+          <td class="listparcel-td"><%= parcels[i].sender %></td>
+          <td class="listparcel-td"><%= parcels[i].address %></td>
+          <td class="listparcel-td"><%= parcels[i].weight %></td>
+          <td class="listparcel-td"><%= parcels[i].fragile ? "Yes" : "No"%></td>
+          <td class="listparcel-td"><%= parcels[i].shipment %></td>
+        </tr>
+        <% } %>
+      </table>
+    </h3>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <a href="/"
+      ><img
+        src="Australia-Post-Logo.png"
+        alt="Australia-Post-Logo"
+        width="100px"
+    /></a>
+    <a href="/newparcel">Add a New Parcel</a>
+    <a href="/listparceloption">List Parcels</a>
+    <a href="/deleteparcel">Delete a Parcel</a>
+    <a href="/updateparcel">Update a Parcel</a>
+  </header>
+  <body>
+    <h1 class="text-danger">Delete a Parcel</h1>
+    <form method="post" action="/deleteparcel">
+      <table>
+        <tr>
+          <td>Parcel ID to Delete</td>
+          <td><input type="text" name="id" /></td>
+        </tr>
+      </table>
+      <button class="btn btn-danger submit-btn" type="submit">Delete</button>
+    </form>
+  </body>
+</html>
