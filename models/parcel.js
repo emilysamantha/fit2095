@@ -11,7 +11,10 @@ let parcelSchema = mongoose.Schema({
     type: String,
     validate: {
       validator: function (shipmentValue) {
-        return shipmentValue === "Express" || shipmentValue === "Standard";
+        return (
+          shipmentValue.toLowerCase() === "express" ||
+          shipmentValue.toLowerCase() === "standard"
+        );
       },
       message: "Shipment should be Express or Standard",
     },

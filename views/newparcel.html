@@ -21,23 +21,43 @@
       <table>
         <tr>
           <td>Sender</td>
-          <td><input type="text" name="sender" /></td>
+          <td><input type="text" name="sender" class="form-control" /></td>
         </tr>
         <tr>
           <td>Address</td>
-          <td><input type="text" name="address" /></td>
+          <td><input type="text" name="address" class="form-control" /></td>
         </tr>
         <tr>
           <td>Weight</td>
-          <td><input type="number" name="weight" /></td>
+          <td><input type="number" name="weight" class="form-control" /></td>
         </tr>
         <tr>
           <td>Fragile</td>
-          <td><input type="checkbox" name="fragile" /></td>
+          <td>
+            <input type="checkbox" name="fragile" class="form-check-input" />
+          </td>
         </tr>
         <tr>
           <td>Shipment</td>
-          <td><input type="text" name="shipment" /></td>
+          <!-- <td><input type="text" name="shipment" /></td> -->
+          <td>
+            <input
+              type="radio"
+              name="shipment"
+              id="standard"
+              value="Standard"
+              class="form-check-input"
+            />
+            <label for="standard" class="form-check-label">Standard</label>
+            <input
+              type="radio"
+              name="shipment"
+              id="express"
+              value="Express"
+              class="form-check-input"
+            />
+            <label for="express" class="form-check-label">Express</label>
+          </td>
         </tr>
       </table>
       <button class="btn btn-danger submit-btn" type="submit">Submit</button>
