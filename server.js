@@ -30,7 +30,7 @@ app.use(
 const Parcel = require("./models/parcel");
 
 // Mongoose URL
-let mongooseUrl = "mongodb://10.138.0.2:27017/fit2095DB";
+let mongooseUrl = "mongodb://localhost:27017/fit2095DB";
 
 // Connect to Mongoose
 mongoose.connect(mongooseUrl, function (err) {
