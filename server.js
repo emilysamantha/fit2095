@@ -177,6 +177,20 @@ app.post("/updateparcel", function (req, res) {
   res.redirect("/listparcelsall");
 });
 
+// Extra task
+app.get("/deleteparcelweightfragile", function (req, res) {
+  res.sendFile(path.join(__dirname, "/views/deleteparcelweightfragile.html"));
+});
+
+app.post("/deleteparcelweightfragile", function (req, res) {
+  let weight = req.body.weight;
+  let fragile = req.body.fragile ? true : false;
+
+  Parcel.deleteMany({ weight: weight, fragile: fragile }, function (err, doc) {
+    res.redirect("/listparcelsall");
+  });
+});
+
 // Error
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/views/error.html"));
